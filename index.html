@@ -1,316 +1,1206 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<!-- Snap Pixel Code -->
-<script type='text/javascript'>
-(function(e,t,n){if(e.snaptr)return;var a=e.snaptr=function()
-{a.handleRequest?a.handleRequest.apply(a,arguments):a.queue.push(arguments)};
-a.queue=[];var s='script';r=t.createElement(s);r.async=!0;
-r.src=n;var u=t.getElementsByTagName(s)[0];
-u.parentNode.insertBefore(r,u);})(window,document,
-'https://sc-static.net/scevent.min.js');
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جولد ستور | الفخامة في عالم التقنية</title>
+    <meta name="description" content="جولد ستور، وجهتك الأولى في الكويت لاقتناء أحدث الأجهزة الذكية بخطط تقسيط مرنة وتجربة تسوق راقية.">
+    
+    <!-- Premium Arabic Fonts: Alexandria for Display, Tajawal for Body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-snaptr('init', '5b5af12d-757b-4e7b-b04f-75e996602445', {});
+    <style>
+        /* ==========================================================================
+           1. CSS VARIABLES & RESET
+           ========================================================================== */
+        :root {
+            /* Luxury Bright Palette */
+            --bg-primary: #FCFBF9;
+            --bg-secondary: #F6F4EE;
+            --bg-tertiary: #FFFFFF;
+            
+            --text-main: #2A2A2A;
+            --text-muted: #6B6B6B;
+            --text-light: #999999;
+            
+            --gold-dark: #B89742;
+            --gold-main: #D4AF37;
+            --gold-light: #F4E8C1;
+            --gold-pale: #FDFBF5;
+            
+            --border-color: #EBEBEB;
+            
+            /* Typography */
+            --font-display: 'Alexandria', sans-serif;
+            --font-body: 'Tajawal', sans-serif;
+            
+            /* Spacing & Layout */
+            --section-pad: 8rem 5%;
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 32px;
+            
+            /* Transitions */
+            --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+            --transition-slow: all 0.8s var(--ease-out);
+            --transition-med: all 0.4s var(--ease-out);
+        }
 
-snaptr('track', 'PAGE_VIEW');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-</script>
-<!-- End Snap Pixel Code -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gold Store Kuwait</title>
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
 
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
 
-  <style>
-    :root{
-      --bg:#FAFAF8;
-      --text:#111111;
-      --gold:#C8A96A;
-      --white:#ffffff;
-      --radius:18px;
-    }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:"IBM Plex Sans Arabic", sans-serif;
-    }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-    body{
-      background:var(--bg);
-      color:var(--text);
-      overflow-x:hidden;
-    }
+        ul {
+            list-style: none;
+        }
 
-    a{
-      text-decoration:none;
-      color:inherit;
-    }
+        /* Typography utility */
+        h1, h2, h3, h4, h5, .display-font {
+            font-family: var(--font-display);
+            font-weight: 500;
+            line-height: 1.3;
+        }
 
-    /* NAV */
-    .nav{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:20px 5%;
-    }
+        /* ==========================================================================
+           2. GLOBAL COMPONENTS
+           ========================================================================== */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
 
-    .logo{
-      font-weight:600;
-      letter-spacing:1px;
-    }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: var(--transition-med);
+            cursor: pointer;
+            border: none;
+        }
 
-    .nav-btn{
-      background:var(--text);
-      color:white;
-      padding:10px 18px;
-      border-radius:999px;
-      font-size:14px;
-      transition:.3s;
-    }
+        .btn-gold {
+            background-color: var(--gold-main);
+            color: var(--bg-primary);
+        }
 
-    .nav-btn:hover{
-      transform:translateY(-2px);
-      opacity:.9;
-    }
+        .btn-gold:hover {
+            background-color: var(--gold-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+        }
 
-    /* HERO */
-    .hero{
-      display:grid;
-      grid-template-columns:1.2fr 1fr;
-      gap:40px;
-      padding:60px 5%;
-      align-items:center;
-    }
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+        }
 
-    h1{
-      font-size:54px;
-      line-height:1.2;
-      font-weight:700;
-    }
+        .btn-outline:hover {
+            border-color: var(--gold-main);
+            color: var(--gold-dark);
+        }
 
-    .sub{
-      margin-top:20px;
-      font-size:18px;
-      opacity:.75;
-      line-height:1.8;
-    }
+        .section-header {
+            margin-bottom: 4rem;
+            max-width: 600px;
+        }
 
-    .cta{
-      margin-top:30px;
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      background:#25D366;
-      color:white;
-      padding:14px 26px;
-      border-radius:999px;
-      font-weight:500;
-      transition:.3s;
-    }
+        .section-subtitle {
+            color: var(--gold-dark);
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            display: block;
+            font-family: var(--font-display);
+        }
 
-    .cta:hover{
-      transform:translateY(-3px);
-      box-shadow:0 10px 30px rgba(0,0,0,.08);
-    }
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--text-main);
+        }
 
-    /* FLOAT PRODUCTS */
-    .float{
-      position:relative;
-      height:420px;
-    }
+        /* Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: var(--transition-slow);
+        }
 
-    .product{
-      position:absolute;
-      width:140px;
-      border-radius:20px;
-      box-shadow:0 20px 40px rgba(0,0,0,.08);
-      animation:float 6s ease-in-out infinite;
-    }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-    .p1{top:20px; right:20px;}
-    .p2{top:120px; left:30px; animation-delay:1s;}
-    .p3{bottom:20px; right:80px; animation-delay:2s;}
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
 
-    @keyframes float{
-      0%,100%{transform:translateY(0)}
-      50%{transform:translateY(-12px)}
-    }
+        /* ==========================================================================
+           3. NAVIGATION
+           ========================================================================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 1.5rem 0;
+            transition: var(--transition-med);
+            background: transparent;
+        }
 
-    /* FEATURES */
-    .features{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:20px;
-      padding:60px 5%;
-    }
+        .navbar.scrolled {
+            background: rgba(252, 251, 249, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+        }
 
-    .feature{
-      background:white;
-      padding:20px;
-      border-radius:var(--radius);
-      font-size:15px;
-      opacity:.85;
-      transition:.3s;
-    }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    .feature:hover{
-      transform:translateY(-4px);
-    }
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold-dark);
+            letter-spacing: -0.5px;
+        }
 
-    /* GALLERY */
-    .gallery{
-      padding:60px 5%;
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:20px;
-    }
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
 
-    .gallery img{
-      width:100%;
-      border-radius:20px;
-      transition:.4s;
-    }
+        .nav-links a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+            transition: color 0.3s ease;
+        }
 
-    .gallery img:hover{
-      transform:scale(1.03);
-    }
+        .nav-links a:hover {
+            color: var(--gold-dark);
+        }
 
-    /* CTA SECTION */
-    .big-cta{
-      text-align:center;
-      padding:100px 5%;
-    }
+        /* ==========================================================================
+           4. HERO SECTION (Editorial & Asymmetrical)
+           ========================================================================== */
+        .hero {
+            padding: 12rem 0 6rem;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
 
-    .big-cta h2{
-      font-size:42px;
-      margin-bottom:15px;
-    }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
 
-    .big-cta p{
-      opacity:.7;
-      margin-bottom:25px;
-    }
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 300;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
 
-    /* FOOTER */
-    footer{
-      padding:40px 5%;
-      display:flex;
-      justify-content:space-between;
-      font-size:14px;
-      opacity:.7;
-    }
+        .hero-content h1 span {
+            font-weight: 700;
+            color: var(--gold-dark);
+            display: block;
+        }
 
-    /* FLOAT WHATSAPP */
-    .wa-float{
-      position:fixed;
-      bottom:20px;
-      right:20px;
-      background:#25D366;
-      color:white;
-      width:55px;
-      height:55px;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:24px;
-      box-shadow:0 10px 30px rgba(0,0,0,.15);
-      z-index:999;
-    }
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            max-width: 85%;
+        }
 
-    /* RESPONSIVE */
-    @media(max-width:900px){
-      .hero{
-        grid-template-columns:1fr;
-      }
+        .hero-visual {
+            position: relative;
+        }
 
-      h1{font-size:38px;}
-      .features{
-        grid-template-columns:1fr 1fr;
-      }
-      .gallery{
-        grid-template-columns:1fr;
-      }
-    }
-  </style>
+        .hero-visual::before {
+            content: '';
+            position: absolute;
+            width: 120%;
+            height: 120%;
+            background: radial-gradient(circle, var(--gold-pale) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            z-index: 1;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+            transform: rotate(-2deg);
+            transition: var(--transition-slow);
+        }
+
+        .hero-image-wrapper:hover {
+            transform: rotate(0) scale(1.02);
+            box-shadow: 0 40px 80px rgba(0,0,0,0.08);
+        }
+
+        .hero-image-wrapper img {
+            width: 100%;
+            height: 700px;
+            object-fit: cover;
+        }
+
+        .floating-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--bg-tertiary);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .badge-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gold-pale);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-dark);
+        }
+
+        /* ==========================================================================
+           5. BRANDS MARQUEE
+           ========================================================================== */
+        .brands {
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--bg-tertiary);
+        }
+
+        .brands-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            opacity: 0.6;
+            filter: grayscale(100%);
+            transition: var(--transition-med);
+        }
+
+        .brands-container:hover {
+            opacity: 1;
+            filter: grayscale(0%);
+        }
+
+        .brand-item {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+        }
+
+        /* ==========================================================================
+           6. FEATURED OFFERS (Magazine Style)
+           ========================================================================== */
+        .featured-offers {
+            padding: var(--section-pad);
+            background: var(--bg-primary);
+        }
+
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: var(--bg-tertiary);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            position: relative;
+            transition: var(--transition-slow);
+            border: 1px solid transparent;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            border-color: var(--gold-light);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+            transform: translateY(-5px);
+        }
+
+        .card-large {
+            grid-column: span 8;
+            flex-direction: row;
+            align-items: center;
+            padding: 4rem;
+            background: var(--bg-secondary);
+        }
+
+        .card-small {
+            grid-column: span 4;
+            padding: 2.5rem;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: var(--gold-main);
+            color: var(--bg-primary);
+            padding: 0.4rem 1rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-family: var(--font-display);
+        }
+
+        .product-image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-large .product-image-container {
+            height: 400px;
+        }
+
+        .card-small .product-image-container {
+            height: 250px;
+            margin-bottom: 2rem;
+        }
+
+        .product-image-container img {
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.6s ease;
+        }
+
+        .product-card:hover .product-image-container img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .product-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-small .product-title {
+            font-size: 1.4rem;
+        }
+
+        .installment-tag {
+            color: var(--gold-dark);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+            font-weight: 500;
+        }
+
+        /* ==========================================================================
+           7. INSTALLMENT PROCESS (Minimal Timeline)
+           ========================================================================== */
+        .process {
+            padding: var(--section-pad);
+            background: var(--bg-tertiary);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 50px;
+            right: 50px;
+            height: 1px;
+            background: var(--border-color);
+            z-index: 1;
+        }
+
+        .step {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--gold-dark);
+            margin: 0 auto 2rem;
+            transition: var(--transition-med);
+        }
+
+        .step:hover .step-number {
+            background: var(--gold-pale);
+            border-color: var(--gold-main);
+            transform: scale(1.1);
+        }
+
+        .step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .step p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* ==========================================================================
+           8. WHY GOLD STORE (Organic Layout)
+           ========================================================================== */
+        .why-us {
+            padding: var(--section-pad);
+            background: var(--bg-secondary);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 4rem;
+        }
+
+        .feature-block {
+            padding-right: 2rem;
+            border-right: 2px solid var(--gold-light);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--gold-main);
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-block h3 {
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        /* ==========================================================================
+           9. REVIEWS & STATS
+           ========================================================================== */
+        .trust-section {
+            padding: var(--section-pad);
+            background: var(--bg-primary);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-bottom: 6rem;
+            padding-bottom: 4rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            color: var(--gold-dark);
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .reviews-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .review-card {
+            background: var(--bg-tertiary);
+            padding: 3rem 2rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .quote-mark {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 4rem;
+            color: var(--gold-pale);
+            line-height: 0;
+            font-family: serif;
+        }
+
+        .review-text {
+            position: relative;
+            z-index: 1;
+            font-size: 1.1rem;
+            color: var(--text-main);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .reviewer-name {
+            font-family: var(--font-display);
+            font-weight: 500;
+            color: var(--gold-dark);
+        }
+
+        /* ==========================================================================
+           10. FAQ
+           ========================================================================== */
+        .faq-section {
+            padding: var(--section-pad);
+            background: var(--bg-secondary);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem 0;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: right;
+            background: none;
+            border: none;
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            color: var(--text-main);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-icon {
+            color: var(--gold-dark);
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            color: var(--text-muted);
+            padding-right: 1rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            margin-top: 1rem;
+        }
+
+        /* ==========================================================================
+           11. CONTACT SECTION
+           ========================================================================== */
+        .contact {
+            padding: var(--section-pad);
+            background: var(--bg-tertiary);
+            text-align: center;
+        }
+
+        .contact-box {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 4rem;
+            background: var(--bg-primary);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gold-light);
+        }
+
+        .phone-number {
+            font-family: var(--font-display);
+            font-size: 4rem;
+            color: var(--gold-dark);
+            display: block;
+            margin: 2rem 0;
+            letter-spacing: 2px;
+            direction: ltr; /* Keeps number readable internationally */
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366; /* Authentic WhatsApp Green for recognition */
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            font-family: var(--font-display);
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: var(--transition-med);
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #1EBE5D;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+        }
+
+        /* ==========================================================================
+           12. FOOTER
+           ========================================================================== */
+        .footer {
+            background: var(--bg-primary);
+            padding: 4rem 5% 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-logo {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--gold-dark);
+            margin-bottom: 1rem;
+        }
+
+        .footer p {
+            color: var(--text-muted);
+            max-width: 300px;
+        }
+
+        .footer-title {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold-main);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* ==========================================================================
+           13. RESPONSIVE DESIGN
+           ========================================================================== */
+        @media (max-width: 1024px) {
+            .hero-grid { grid-template-columns: 1fr; text-align: center; }
+            .hero-content p { margin: 0 auto 3rem; }
+            .floating-badge { right: auto; left: 20px; }
+            .editorial-grid { display: flex; flex-direction: column; }
+            .card-large { flex-direction: column; text-align: center; padding: 2rem; }
+            .card-large .product-image-container { height: 300px; margin-bottom: 2rem; }
+            .process-steps { grid-template-columns: 1fr; gap: 4rem; }
+            .process-steps::before { display: none; }
+            .stats-grid, .reviews-container { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            .hero-image-wrapper img { height: 400px; }
+            .stats-grid, .reviews-container { grid-template-columns: 1fr; }
+            .nav-links { display: none; /* In production, add a hamburger menu */ }
+            .phone-number { font-size: 3rem; }
+        }
+    </style>
 </head>
-
 <body>
 
-  <!-- NAV -->
-  <div class="nav">
-    <div class="logo">Gold Store Kuwait</div>
-    <a class="nav-btn" href="https://wa.me/96566483296">تواصل واتساب</a>
-  </div> <!-- NAV -->
-  
-  <!-- HERO -->
-  <section class="hero">
+    <!-- NAVIGATION -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">جولد ستور</div>
+            <ul class="nav-links">
+                <li><a href="#offers">العروض الحصرية</a></li>
+                <li><a href="#installments">نظام التقسيط</a></li>
+                <li><a href="#why-us">لماذا نحن</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <div>
-      <h1>أفضل العروض <br/> حتى لو متجاوز النسبة....لا تشيل هم! </h1>
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content reveal">
+                <h1>ارتقِ بتجربتك.<br><span>الفخامة بين يديك.</span></h1>
+                <p>نقدم لك في الكويت أحدث الإصدارات العالمية من الهواتف والأجهزة الذكية، مصحوبة بخطط دفع مرنة وتجربة تسوق تليق بك.</p>
+                <div style="display: flex; gap: 1rem; align-items: center; justify-content: flex-start; flex-wrap: wrap;">
+                    <a href="#offers" class="btn btn-gold">استكشف الإصدارات</a>
+                    <a href="#installments" class="btn btn-outline">تعرف على التقسيط</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual reveal delay-2">
+                <div class="hero-image-wrapper">
+                    <!-- High quality tech aesthetic placeholder representing premium devices -->
+                    <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MGFQ4?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=WmZ3S0xpdk5pL2FXS3JSLy9WMCthd2tuVHYzMERCZURia3c5SzJFOTlPaWVqbEpIZ1hib0hHcnQwY0VMaEZFTkliQ1FoR3Yyemx4THY5NjA4NS9Rbnc" alt="أحدث الأجهزة الذكية">
+                </div>
+                <div class="floating-badge">
+                    <div class="badge-icon">✓</div>
+                    <div>
+                        <div style="font-family: var(--font-display); font-weight: 700;">موافقة فورية</div>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">لخطط التقسيط</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-      <div class="sub">
-        نوفر أحدث أجهزة Apple ومنتجات التقنية المختارة بعناية مع خدمة تقسيط ميسرة وتجربة شراء راقية.
-      </div>
+    <!-- BRANDS MARQUEE -->
+    <section class="brands">
+        <div class="container brands-container reveal">
+            <div class="brand-item">APPLE</div>
+            <div class="brand-item">SAMSUNG</div>
+            <div class="brand-item">SONY</div>
+            <div class="brand-item">BOSE</div>
+            <div class="brand-item">NOTHING</div>
+        </div>
+    </section>
 
-      <a class="cta" href="https://wa.me/96566483296">
-        ابدأ المحادثة الآن
-      </a>
-      
-    </div>
-<div>
+    <!-- FEATURED OFFERS -->
+    <section id="offers" class="featured-offers">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">إصدارات النخبة</span>
+                <h2 class="section-title">التكنولوجيا في أبهى صورها</h2>
+            </div>
+            
+            <div class="editorial-grid">
+                <!-- Large Featured Item -->
+                <div class="product-card card-large reveal delay-1">
+                    <div class="product-badge">جديد</div>
+                    <div class="product-info">
+                        <h3 class="product-title display-font">ايفون 17 برو ماكس</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 1.5rem; max-width: 400px;">
+                            تحفة آبل الهندسية الأحدث. تصميم من التيتانيوم الفاخر مع نظام كاميرات احترافي يلتقط التفاصيل ببراعة غير مسبوقة.
+                        </p>
+                        <div class="installment-tag">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            متاح بنظام الأقساط الشهرية الميسرة
+                        </div>
+                    </div>
+                    <div class="product-image-container">
+                        <!-- Abstract/Luxury phone representation -->
+                        <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&q=80&w=800" alt="iPhone 17 Pro Max">
+                    </div>
+                </div>
 
+                <!-- Small Items -->
+                <div class="product-card card-small reveal delay-2">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1678911820864-e2c567c655d7?auto=format&fit=crop&q=80&w=600" alt="Samsung S25 Ultra">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title display-font">Samsung S26 Ultra</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">قوة الذكاء الاصطناعي بين يديك مع قلم S-Pen المدمج.</p>
+                        <div class="installment-tag">بدون دفعة أولى</div>
+                    </div>
+                </div>
 
-</div>
-    <div class="float">
-      <img class="product p1" src="https://images.unsplash.com/photo-1603891128711-11b4b03bb138" />
-      <img class="product p2" src="https://images.unsplash.com/photo-1580910051074-3eb694886505" />
-      <img class="product p3" src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"/>
-    </div>
-<p>✓ أجهزة أصلية مع خدمة سريعة.</p>
-<p>✓ فريقنا يساعدك في اختيار أفضل الحلول.</p>
-  </section>
+                <div class="product-card card-small reveal delay-3">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?auto=format&fit=crop&q=80&w=600" alt="AirPods Pro">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title display-font">AirPods Pro</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">عزل صوتي فائق لتجربة استماع نقية وعميقة.</p>
+                        <div class="installment-tag">خصم خاص لفترة محدودة</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- CTA -->
-  <section class="big-cta">
-    <h2>جاهز تبدأ؟</h2>
-    <p>تواصل معنا عبر واتساب وسنساعدك في اختيار الجهاز المناسب</p>
-    <a class="cta" href="https://wa.me/96566483296">تواصل واتساب</a>
-  </section>
+    <!-- INSTALLMENT PROCESS -->
+    <section id="installments" class="process">
+        <div class="container">
+            <div class="section-header reveal" style="text-align: center; margin: 0 auto 5rem;">
+                <span class="section-subtitle">طريقك لاقتناء الأفضل</span>
+                <h2 class="section-title">خطوات بسيطة.. لرفاهية دائمة</h2>
+            </div>
 
-  <!-- FEATURES -->
-  <section class="features">
-    <div class="feature">✓ أفضل الأسعار</div>
-    <div class="feature">✓ دفعات شهرية ميسرة</div>
-    <div class="feature">✓ أجهزة أصلية</div>
-    <div class="feature">✓ خدمة سريعة</div>
-  </section>
+            <div class="process-steps">
+                <div class="step reveal delay-1">
+                    <div class="step-number">١</div>
+                    <h3>اختر جهازك المفضل</h3>
+                    <p>تصفح مجموعتنا الواسعة من أحدث الأجهزة والإصدارات العالمية المتوفرة لدينا.</p>
+                </div>
+                <div class="step reveal delay-2">
+                    <div class="step-number">٢</div>
+                    <h3>حدد خطة الدفع</h3>
+                    <p>اختر نظام التقسيط الذي يناسب ميزانيتك الشهرية بمرونة تامة وبدون تعقيدات.</p>
+                </div>
+                <div class="step reveal delay-3">
+                    <div class="step-number">٣</div>
+                    <h3>استلم جهازك فوراً</h3>
+                    <p>بمجرد الموافقة الفورية، استلم جهازك في نفس اليوم وابدأ بتجربة الفخامة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- GALLERY -->
-  <section class="gallery">
-    <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5"/>
-    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"/>
-    <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505"/>
-  </section>
+    <!-- WHY US -->
+    <section id="why-us" class="why-us">
+        <div class="container">
+            <div class="features-grid">
+                <div class="reveal">
+                    <span class="section-subtitle">لماذا جولد ستور؟</span>
+                    <h2 class="section-title" style="margin-bottom: 2rem;">معايير كويتية<br>برؤية عالمية.</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem;">
+                        نحن لا نبيع الأجهزة فحسب، بل نصنع تجربة متكاملة تبدأ من لحظة اختيارك للجهاز وتمتد عبر سنوات من الرعاية والضمان.
+                    </p>
+                </div>
+                
+                <div class="feature-block reveal delay-1">
+                    <div class="feature-icon">✦</div>
+                    <h3>ضمان ممتد</h3>
+                    <p style="color: var(--text-muted);">راحة بالك هي أولويتنا، لذلك نقدم ضماناً يشمل الصيانة الفورية للأعطال المصنعية.</p>
+                </div>
 
-  <!-- CTA -->
-  <section class="big-cta">
-    <h2>جاهز تبدأ؟</h2>
-    <p>تواصل معنا عبر واتساب وسنساعدك في اختيار الجهاز المناسب</p>
-    <a class="cta" href="https://wa.me/96566483296">تواصل واتساب</a>
-  </section>
+                <div class="feature-block reveal delay-2">
+                    <div class="feature-icon">✦</div>
+                    <h3>خدمة كبار الشخصيات</h3>
+                    <p style="color: var(--text-muted);">فريق دعم مخصص لتلبية احتياجاتك، وتوصيل آمن إلى باب منزلك في كافة مناطق الكويت.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div>Gold Store Kuwait</div>
-    <div>+965 66483296</div>
-  </footer>
+    <!-- STATS & REVIEWS -->
+    <section class="trust-section">
+        <div class="container">
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <div class="stat-number" data-target="15000">0</div>
+                    <div class="stat-label">+ عميل سعيد</div>
+                </div>
+                <div class="stat-item reveal delay-1">
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">% أجهزة أصلية</div>
+                </div>
+                <div class="stat-item reveal delay-2">
+                    <div class="stat-number" data-target="24">0</div>
+                    <div class="stat-label">ساعة للتوصيل</div>
+                </div>
+                <div class="stat-item reveal delay-3">
+                    <div class="stat-number" data-target="5">0</div>
+                    <div class="stat-label">سنوات من الثقة</div>
+                </div>
+            </div>
 
-  <!-- FLOAT WHATSAPP -->
-  <a class="wa-float" href="https://wa.me/96566483296">✆</a>
+            <!-- Reviews -->
+            <div class="section-header reveal" style="text-align: center; margin: 0 auto 4rem;">
+                <h2 class="section-title">ثقة عملائنا.. وسام نفخر به</h2>
+            </div>
 
+            <div class="reviews-container">
+                <div class="review-card reveal delay-1">
+                    <div class="quote-mark">"</div>
+                    <p class="review-text">تجربة راقية جداً من البداية للنهاية. سهولة في إجراءات التقسيط بدون أي تعقيدات، والجهاز وصلني بنفس اليوم.</p>
+                    <div class="reviewer-name">عبدالله المرزوق</div>
+                </div>
+                <div class="review-card reveal delay-2">
+                    <div class="quote-mark">"</div>
+                    <p class="review-text">الخدمة ممتازة والموظفين بقمة الرقي في التعامل. جولد ستور هو مكاني الأول دائماً لاقتناء أجهزة آبل.</p>
+                    <div class="reviewer-name">فاطمة الكندري</div>
+                </div>
+                <div class="review-card reveal delay-3">
+                    <div class="quote-mark">"</div>
+                    <p class="review-text">مصداقية عالية وشفافية في أسعار الأقساط. أنصح الجميع بالتعامل معهم لأنهم فعلاً يهتمون بالعميل.</p>
+                    <div class="reviewer-name">سعود العتيبي</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header reveal" style="text-align: center; margin: 0 auto 4rem;">
+                <span class="section-subtitle">الأسئلة الشائعة</span>
+                <h2 class="section-title">كل ما تود معرفته</h2>
+            </div>
+
+            <div class="faq-container reveal delay-1">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ما هي الشروط والأوراق المطلوبة للتقسيط؟
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>الإجراءات بسيطة جداً، نحتاج فقط إلى البطاقة المدنية الصالحة، وشهادة راتب حديثة. تتم الموافقة خلال دقائق.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        هل الأجهزة مشمولة بالضمان المحلي؟
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>نعم، جميع أجهزتنا أصلية 100% ومشمولة بضمان الوكيل الرسمي في دولة الكويت بالإضافة إلى كفالة جولد ستور الخاصة.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        هل يتوفر توصيل لجميع مناطق الكويت؟
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>بكل تأكيد، نوفر خدمة التوصيل الآمن والسريع لكافة محافظات ومناطق الكويت خلال 24 ساعة من إتمام الطلب.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT (Directly addressing the user constraint) -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-box reveal">
+                <span class="section-subtitle">دعنا نخدمك</span>
+                <h2 class="section-title">تواصل معنا بكل سهولة</h2>
+                <p style="color: var(--text-muted); margin-top: 1rem;">فريقنا متاح للرد على استفساراتكم ومساعدتكم في اختيار الأنسب.</p>
+                
+                <!-- Large Phone Number -->
+                <a href="tel:6648296" class="phone-number">6648296</a>
+                
+                <!-- WhatsApp Button Only Here -->
+                <a href="https://wa.me/9656648296" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                    </svg>
+                    تحدث معنا عبر واتساب
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">جولد ستور</div>
+                    <p>وجهتك الأولى في دولة الكويت لاقتناء أحدث الأجهزة الذكية بخطط دفع مرنة وتجربة تسوق راقية تلبي تطلعاتك.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="#offers">أحدث الإصدارات</a></li>
+                        <li><a href="#installments">نظام الأقساط</a></li>
+                        <li><a href="#why-us">عن الشركة</a></li>
+                        <li><a href="#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">معلومات قانونية</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">الشروط والأحكام</a></li>
+                        <li><a href="#">سياسة الخصوصية</a></li>
+                        <li><a href="#">سياسة الاسترجاع</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 جولد ستور الكويت. جميع الحقوق محفوظة.
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVITY SCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. Sticky Navigation
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // 2. Scroll Reveal Animations (Intersection Observer)
+            const revealElements = document.querySelectorAll('.reveal');
+            
+            const revealOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, revealOptions);
+
+            revealElements.forEach(el => {
+                revealOnScroll.observe(el);
+            });
+
+            // 3. Counter Animation for Stats
+            const counters = document.querySelectorAll('.stat-number');
+            let hasCounted = false;
+
+            const counterObserver = new IntersectionObserver((entries) => {
+                const [entry] = entries;
+                if (entry.isIntersecting && !hasCounted) {
+                    counters.forEach(counter => {
+                        const target = +counter.getAttribute('data-target');
+                        const duration = 2000; // ms
+                        const increment = target / (duration / 16); // 60fps
+
+                        let current = 0;
+                        const updateCounter = () => {
+                            current += increment;
+                            if (current < target) {
+                                counter.innerText = Math.ceil(current);
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                counter.innerText = target + (target > 1000 ? '+' : '');
+                            }
+                        };
+                        updateCounter();
+                    });
+                    hasCounted = true;
+                }
+            }, { threshold: 0.5 });
+
+            const statsSection = document.querySelector('.stats-grid');
+            if(statsSection) counterObserver.observe(statsSection);
+
+            // 4. FAQ Accordion Logic
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close others
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
